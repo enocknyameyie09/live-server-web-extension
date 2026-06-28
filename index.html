@@ -1,0 +1,409 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Enock Microfinance</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+    .hero{
+
+background:linear-gradient(135deg,#0f172a,#2563eb);
+
+color:white;
+
+text-align:center;
+
+padding:80px 20px;
+
+}
+
+.hero h1{
+
+font-size:50px;
+
+margin-bottom:20px;
+
+}
+
+.hero p{
+
+font-size:20px;
+
+max-width:700px;
+
+margin:auto;
+
+line-height:1.7;
+
+}
+
+.buttons{
+
+margin-top:35px;
+
+}
+
+.btn1,.btn2{
+
+display:inline-block;
+
+padding:15px 35px;
+
+margin:10px;
+
+border-radius:50px;
+
+text-decoration:none;
+
+font-weight:bold;
+
+transition:.3s;
+
+}
+
+.btn1{
+
+background:#fbbf24;
+
+color:#111;
+
+}
+
+.btn2{
+
+background:white;
+
+color:#2563eb;
+
+}
+
+.btn1:hover,
+
+.btn2:hover{
+
+transform:translateY(-4px);
+
+}
+
+.cards{
+
+display:grid;
+
+grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+
+gap:25px;
+
+padding:60px 40px;
+
+background:#f8fafc;
+
+}
+
+.card{
+
+background:white;
+
+padding:30px;
+
+border-radius:18px;
+
+box-shadow:0 10px 30px rgba(0,0,0,.1);
+
+transition:.3s;
+
+text-align:center;
+
+}
+
+.card:hover{
+
+transform:translateY(-8px);
+
+}
+
+.card h2{
+
+margin-bottom:15px;
+
+color:#2563eb;
+
+}
+
+.card p{
+
+line-height:1.7;
+
+color:#555;
+
+}
+
+
+* {
+
+    margin: 0;
+
+    padding: 0;
+
+    box-sizing: border-box;
+
+    font-family: 'Poppins', sans-serif;
+
+}
+
+/* HEADER */
+
+header {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 15px 20px;
+
+    background: #1e3a8a;
+
+    color: white;
+
+}
+
+.logo {
+
+    font-size: 20px;
+
+    font-weight: 600;
+
+}
+
+/* HAMBURGER BUTTON */
+
+.menu-btn {
+
+    font-size: 28px;
+
+    cursor: pointer;
+
+    user-select: none;
+
+}
+
+/* OVERLAY BACKGROUND */
+
+.overlay {
+
+    position: fixed;
+
+    top: 0;
+
+    left: 0;
+
+    width: 100%;
+
+    height: 100%;
+
+    background: rgba(0,0,0,0.5);
+
+    display: none;
+
+    z-index: 10;
+
+}
+
+/* SIDE MENU */
+
+.side-menu {
+
+    position: fixed;
+
+    top: 0;
+
+    right: -260px;
+
+    width: 250px;
+
+    height: 100%;
+
+    background: white;
+
+    padding: 20px;
+
+    transition: 0.3s ease;
+
+    z-index: 20;
+
+}
+
+.side-menu h3 {
+
+    margin-bottom: 20px;
+
+    color: #1e3a8a;
+
+}
+
+.side-menu a {
+
+    display: block;
+
+    padding: 12px 0;
+
+    text-decoration: none;
+
+    color: #333;
+
+    border-bottom: 1px solid #eee;
+
+}
+
+/* ACTIVE STATES */
+
+.side-menu.active {
+
+    right: 0;
+
+}
+
+.overlay.active {
+
+    display: block;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<header>
+
+    <div class="logo">Enock Microfinance</div>
+
+    <!-- HAMBURGER ICON -->
+
+    <div class="menu-btn" onclick="openMenu()">☰</div>
+
+</header>
+<section class="hero">
+
+<h1>Empowering Your Financial Future</h1>
+
+<p>
+
+Secure savings, quick loans, and trusted financial services for
+
+individuals and businesses.
+
+</p>
+
+<div class="buttons">
+
+<a href="register.html" class="btn1">Open Account</a>
+
+<a href="login.html" class="btn2">Login</a>
+
+</div>
+
+</section>
+
+<section class="cards">
+
+<div class="card">
+
+<h2>💰 Savings</h2>
+
+<p>Grow your money with secure savings accounts and attractive interest.</p>
+
+</div>
+
+<div class="card">
+
+<h2>🏦 Loans</h2>
+
+<p>Apply for personal and business loans with quick approval.</p>
+
+</div>
+
+<div class="card">
+
+<h2>📈 Investments</h2>
+
+<p>Build wealth through reliable investment opportunities.</p>
+
+</div>
+
+<div class="card">
+
+<h2>🤝 Customer Care</h2>
+
+<p>Friendly support available whenever you need assistance.</p>
+
+</div>
+
+</section>
+
+<!-- OVERLAY -->
+
+<div class="overlay" id="overlay" onclick="closeMenu()"></div>
+
+<!-- SIDE MENU -->
+
+<div class="side-menu" id="sideMenu">
+
+    <h3>Menu</h3>
+
+    <a href="index.html">Home</a>
+
+    <a href="login.html">Login</a>
+
+    <a href="register.html">Register</a>
+
+    <a href="dashboard.html">Dashboard</a>
+
+    <a href="customers.html">Customers</a>
+<a href="about.html">About</a>
+    <a href="loans.html">Loans</a>
+
+    <a href="savings.html">Savings</a>
+
+</div>
+
+<script>
+
+function openMenu() {
+
+    document.getElementById("sideMenu").classList.add("active");
+
+    document.getElementById("overlay").classList.add("active");
+
+}
+
+function closeMenu() {
+
+    document.getElementById("sideMenu").classList.remove("active");
+
+    document.getElementById("overlay").classList.remove("active");
+
+}
+
+</script>
+
+</body>
+   
+
+</html>
+
+
+
+
+
+

@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Create Account | Enock Microfinance</title>
+
+<link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+<style>
+
+*{
+
+margin:0;
+
+padding:0;
+
+box-sizing:border-box;
+
+font-family:'Poppins',sans-serif;
+
+}
+
+body{
+
+min-height:100vh;
+
+display:flex;
+
+justify-content:center;
+
+align-items:center;
+
+background:linear-gradient(135deg,#0f172a,#1d4ed8,#2563eb);
+
+padding:30px;
+
+}
+
+.container{
+
+width:100%;
+
+max-width:460px;
+
+background:rgba(255,255,255,.98);
+
+padding:40px;
+
+border-radius:20px;
+
+box-shadow:0 20px 45px rgba(0,0,0,.35);
+
+}
+
+.logo{
+
+text-align:center;
+
+margin-bottom:10px;
+
+font-size:30px;
+
+font-weight:700;
+
+color:#0f172a;
+
+}
+
+.subtitle{
+
+text-align:center;
+
+color:#666;
+
+margin-bottom:30px;
+
+}
+
+.input-group{
+
+margin-bottom:18px;
+
+}
+
+label{
+
+display:block;
+
+margin-bottom:8px;
+
+font-weight:600;
+
+color:#333;
+
+}
+
+input{
+
+width:100%;
+
+padding:14px;
+
+border:1px solid #ddd;
+
+border-radius:10px;
+
+font-size:15px;
+
+outline:none;
+
+transition:.3s;
+
+}
+
+input:focus{
+
+border-color:#2563eb;
+
+box-shadow:0 0 8px rgba(37,99,235,.25);
+
+}
+
+button{
+
+width:100%;
+
+padding:15px;
+
+background:#1d4ed8;
+
+color:white;
+
+font-size:17px;
+
+font-weight:bold;
+
+border:none;
+
+border-radius:10px;
+
+cursor:pointer;
+
+transition:.3s;
+
+margin-top:10px;
+
+}
+
+button:hover{
+
+background:#0f3fb8;
+
+transform:translateY(-2px);
+
+}
+
+.footer{
+
+text-align:center;
+
+margin-top:25px;
+
+font-size:15px;
+
+}
+
+.footer a{
+
+text-decoration:none;
+
+color:#1d4ed8;
+
+font-weight:600;
+
+}
+
+.footer a:hover{
+
+text-decoration:underline;
+
+}
+
+.security{
+
+margin-top:20px;
+
+text-align:center;
+
+font-size:13px;
+
+color:#777;
+
+}
+
+</style>
+
+</head>
+
+<body>
+
+<div class="container">
+
+<div class="logo">
+
+🏦 Enock Microfinance
+
+</div>
+
+<p class="subtitle">
+
+Create your secure customer account
+
+</p>
+
+<form id="registerForm">
+
+<div class="input-group">
+
+<label>Full Name</label>
+
+<input type="text" id="fullname" placeholder="Enter your full name" required>
+
+</div>
+
+<div class="input-group">
+
+<label>Email Address</label>
+
+<input type="email" id="email" placeholder="example@email.com" required>
+
+</div>
+
+<div class="input-group">
+
+<label>Phone Number</label>
+
+<input type="tel" id="phone" placeholder="+233 XX XXX XXXX" required>
+
+</div>
+
+<div class="input-group">
+
+<label>Password</label>
+
+<input type="password" id="password" placeholder="Create a password" required>
+
+</div>
+
+<div class="input-group">
+
+<label>Confirm Password</label>
+
+<input type="password" id="confirmPassword" placeholder="Confirm password" required>
+
+</div>
+
+<button type="submit">
+
+Create Account
+
+</button>
+
+</form>
+
+<div class="footer">
+
+Already have an account?
+
+<a href="login.html">
+
+Login
+
+</a>
+
+</div>
+
+<div class="security">
+
+🔒 Your information is securely protected.
+
+</div>
+
+</div>
+
+<script type="module" src="js/auth.js"></script>
+
+</body>
+
+</html>
